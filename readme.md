@@ -27,8 +27,8 @@ A simple **Ethereum Wallet CLI** built in **Go** that allows users to:
 
 ### **Clone the Repository**
 ```sh
-git clone https://github.com/yourusername/ethereum-cli-wallet.git
-cd ethereum-cli-wallet
+git clone https://github.com/Kol1aUA/go-eth-wallet.git
+cd go-eth-wallet
 
 
 ## Setup Env Variables
