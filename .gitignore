@@ -1,0 +1,35 @@
+# Ignore compiled binary files
+wallet
+
+# Ignore build artifacts
+*.exe
+*.out
+*.o
+*.a
+*.so
+*.dll
+
+# Ignore Go dependency files
+go.sum
+vendor/
+
+# Ignore IDE/editor settings
+.vscode/
+.idea/
+*.iml
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore environment files (secrets)
+.env
+*.env
+
+# Ignore encrypted wallet files
+wallets.json
+default_wallet.txt
+wallets_backup.json
+
+# Ignore Docker build artifacts
+docker-compose.override.yml
