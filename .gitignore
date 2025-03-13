@@ -1,6 +1,3 @@
-# Ignore compiled binary files
-wallet
-
 # Ignore build artifacts
 *.exe
 *.out
