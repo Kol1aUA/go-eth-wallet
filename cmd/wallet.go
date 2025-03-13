@@ -9,10 +9,11 @@ import (
 )
 
 var createCmd = &cobra.Command{
-	Use:   "create",
+	Use:   "create <wallet-name>",
 	Short: "Generate a new ETH wallet",
 	Run: func(cmd *cobra.Command, args []string) {
-		address, err := wallet.CreateWallet()
+		walletName := args[0]
+		address, err := wallet.CreateNewWallet(walletName)
 		if err != nil {
 			log.Fatal("Error creating wallet:", err)
 		}
@@ -22,12 +23,13 @@ var createCmd = &cobra.Command{
 }
 
 var importComand = &cobra.Command{
-	Use:   "import <private-key>",
+	Use:   "import <wallet-name> <private-key>",
 	Short: "Import ETH wallet using private key",
 	Args:  cobra.ExactArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
-		privateKey := args[0]
-		err := wallet.ImportWallet(privateKey)
+		walletName := args[0]
+		privateKey := args[1]
+		err := wallet.ImportWallet(walletName, privateKey)
 		if err != nil {
 			log.Fatal("Error importing wallet:", err)
 		}
